@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">edh_utils</string>
+    <string name="btnCoinsText">teste</string>
+    <string name="main_acitivity_header_text">EDH Utilities</string>
+    <string name="main_acitivity_coins_text">Lets gamble!</string>
+    <string name="main_acitivity_planechase_text">Planechasing</string>
+    <string name="coins_activity_header_text">Coins n\' Thumbs</string>
+    <string name="coins_activity_flip_button_text">Test your luck!</string>
+</resources>
