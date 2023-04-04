@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">edh_utils</string>
-    <string name="btnCoinsText">teste</string>
+    <string name="app_name">Commander Tools</string>
     <string name="main_acitivity_header_text">EDH Utilities</string>
     <string name="main_acitivity_coins_text">Lets gamble!</string>
     <string name="main_acitivity_planechase_text">Planechasing</string>
