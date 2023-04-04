@@ -8,4 +8,6 @@
     <string name="coins_activity_flip_button_text">Test your luck!</string>
     <string name="coins_activity_redmana_counter_text">0</string>
     <string name="coins_activity_blue_counter_text">0</string>
+    <string name="coins_activity_colorless_counter_text">0</string>
+    <string name="coins_activity_storm_counter_text">0</string>
 </resources>
