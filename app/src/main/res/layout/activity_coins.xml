@@ -17,7 +17,7 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.05"
         />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -44,7 +44,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.06"
-        android:text="@string/coins_activity_flip_button_text"/>
+        android:text="@string/coins_activity_flip_button_text"
+        android:textSize="10sp"/>
 
     <ImageView
         android:layout_width="110dp"
@@ -108,8 +109,7 @@
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/coins_activity_redmana_background"
         app:layout_constraintStart_toStartOf="@+id/coins_activity_redmana_background"
-        app:layout_constraintTop_toBottomOf="@id/coins_activity_redmana_background"
-        app:layout_constraintBottom_toTopOf="@id/coins_activity_colorless_background" />
+        app:layout_constraintTop_toBottomOf="@id/coins_activity_redmana_background" />
 
     <TextView
         android:id="@+id/coins_activity_bluemana_counter"
@@ -118,12 +118,31 @@
         android:text="@string/coins_activity_blue_counter_text"
         android:textColor="@color/black"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/coins_activity_colorless_background"
         app:layout_constraintEnd_toEndOf="@+id/coins_activity_bluemana_background"
         app:layout_constraintStart_toStartOf="@+id/coins_activity_bluemana_background"
-        app:layout_constraintTop_toBottomOf="@id/coins_activity_bluemana_background"
- />
+        app:layout_constraintTop_toBottomOf="@id/coins_activity_bluemana_background" />
 
+    <TextView
+        android:id="@+id/coins_activity_colorless_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coins_activity_colorless_counter_text"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/coins_activity_colorless_background"
+        app:layout_constraintStart_toStartOf="@id/coins_activity_colorless_background"
+        app:layout_constraintEnd_toEndOf="@id/coins_activity_colorless_background" />
 
+    <TextView
+        android:id="@+id/coins_activity_storm_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/coins_activity_storm_counter_text"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@id/coins_activity_storm_background"
+        app:layout_constraintStart_toStartOf="@id/coins_activity_storm_background"
+        app:layout_constraintEnd_toEndOf="@id/coins_activity_storm_background"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
