@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         //Planechase button function
         binding.mainActivityPlanechase.setOnClickListener {
-            val Intent = Intent(this,CoinsActivity::class.java)
+            val Intent = Intent(this,PlanechaseActivity::class.java)
             startActivity(Intent)
         }
     }
