@@ -9,4 +9,6 @@
     <string name="coins_activity_blue_counter_text">0</string>
     <string name="coins_activity_colorless_counter_text">0</string>
     <string name="coins_activity_storm_counter_text">0</string>
+    <string name="planechase_activity_header_text">EDH Planechase</string>
+    <string name="planechase_activity_action_text">Choose your destiny!</string>
 </resources>
