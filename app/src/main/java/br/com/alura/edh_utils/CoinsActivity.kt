@@ -12,5 +12,22 @@ class CoinsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCoinsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        onButtonPress()
     }
+
+    private fun onButtonPress() {
+    }
+
+    private fun flipTheCoin(imageId: Int, coinSide: String) {
+        binding.ivCoin.animate().apply {
+            duration = 1000
+            rotationYBy(1000F)
+            binding.ivCoin.isClickable = false
+        }.withEndAction {
+            binding.ivCoin.setImageResource(imageId)
+        }.start()
+    }
+
+
 }

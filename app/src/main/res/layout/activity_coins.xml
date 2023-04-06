@@ -31,10 +31,19 @@
         app:layout_constraintTop_toBottomOf="@id/coins_activity_header"
         app:layout_constraintVertical_bias="0.04"
         app:shapeAppearanceOverlay="@style/roundedImageView"
-        app:srcCompat="@drawable/coin"
         tools:ignore="ImageContrastCheck,ImageContrastCheck"
         />
 
+    <ImageView
+        android:id="@+id/iv_coin"
+        android:layout_width="200dp"
+        android:layout_height="2000dp"
+        app:layout_constraintTop_toTopOf="@id/coins_activity_flip_background"
+        app:layout_constraintBottom_toBottomOf="@id/coins_activity_flip_background"
+        app:layout_constraintStart_toStartOf="@id/coins_activity_flip_background"
+        app:layout_constraintEnd_toEndOf="@id/coins_activity_flip_background"
+        android:src="@drawable/iv_heads"
+        />
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
