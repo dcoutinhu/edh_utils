@@ -9,7 +9,7 @@ import android.widget.Toast
 import br.com.alura.edh_utils.databinding.ActivityCoinsBinding
 import kotlin.random.Random
 
-class CoinsActivity : AppCompatActivity() {
+class CoinsActivity : AppCompatActivity(), View.OnClickListener{
 
     private lateinit var binding : ActivityCoinsBinding
 
@@ -19,18 +19,13 @@ class CoinsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         onButtonPress()
-        binding.coinsActivityRedmanaIncrementButton.setOnClickListener {
-            incrementCounter(binding.coinsActivityRedmanaCounter)
-        }
+        binding.coinsActivityRedmanaIncrementButton.setOnClickListener(this)
+        binding.coinsActivityRedmanaDecrementButton.setOnClickListener(this)
 
-        binding.coinsActivityRedmanaIncrementButton.setOnLongClickListener {
-            resetCounter(binding.coinsActivityRedmanaCounter)
-            return@setOnLongClickListener true
-        }
-
-        binding.coinsActivityRedmanaDecrementButton.setOnClickListener {
-            decrementCounter(binding.coinsActivityRedmanaCounter)
-        }
+//        binding.coinsActivityRedmanaIncrementButton.setOnLongClickListener {
+//            resetCounter(binding.coinsActivityRedmanaCounter)
+//            return@setOnLongClickListener true
+//        }
     }
 
     private fun onButtonPress() {
@@ -71,4 +66,12 @@ class CoinsActivity : AppCompatActivity() {
     private fun resetCounter(counterText: TextView) {
         counterText.text = "0"
     }
+
+    override fun onClick(view: View){
+        when(view.id) {
+            binding.coinsActivityRedmanaIncrementButton.id -> incrementCounter(binding.coinsActivityRedmanaCounter)
+            binding.coinsActivityRedmanaDecrementButton.id -> decrementCounter(binding.coinsActivityRedmanaCounter)
+        }
+    }
+
 }
