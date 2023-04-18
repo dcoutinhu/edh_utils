@@ -2,6 +2,10 @@ package br.com.alura.edh_utils
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import br.com.alura.edh_utils.databinding.ActivityCoinsBinding
 import kotlin.random.Random
 
@@ -15,6 +19,18 @@ class CoinsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         onButtonPress()
+        binding.coinsActivityRedmanaIncrementButton.setOnClickListener {
+            incrementCounter(binding.coinsActivityRedmanaCounter)
+        }
+
+        binding.coinsActivityRedmanaIncrementButton.setOnLongClickListener {
+            resetCounter(binding.coinsActivityRedmanaCounter)
+            return@setOnLongClickListener true
+        }
+
+        binding.coinsActivityRedmanaDecrementButton.setOnClickListener {
+            decrementCounter(binding.coinsActivityRedmanaCounter)
+        }
     }
 
     private fun onButtonPress() {
@@ -40,5 +56,19 @@ class CoinsActivity : AppCompatActivity() {
         }.start()
     }
 
+    private fun incrementCounter(counterText: TextView) {
+        var valueInt = counterText.text.toString().toInt()
+        valueInt += 1
+        counterText.text = valueInt.toString()
+    }
 
+    private fun decrementCounter(counterText: TextView) {
+        var valueInt = counterText.text.toString().toInt()
+        valueInt -= 1
+        counterText.text = valueInt.toString()
+    }
+
+    private fun resetCounter(counterText: TextView) {
+        counterText.text = "0"
+    }
 }
