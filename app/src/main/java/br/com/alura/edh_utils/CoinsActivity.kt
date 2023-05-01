@@ -19,8 +19,22 @@ class CoinsActivity : AppCompatActivity(), View.OnClickListener{
         setContentView(binding.root)
 
         onButtonPress()
+
+        // Red mana
         binding.coinsActivityRedmanaIncrementButton.setOnClickListener(this)
         binding.coinsActivityRedmanaDecrementButton.setOnClickListener(this)
+
+        //Blue mana
+        binding.coinsActivityBluemanaIncrementButton.setOnClickListener(this)
+        binding.coinsActivityBluemanaDecrementButton.setOnClickListener(this)
+
+        //Colorless mana
+        binding.coinsActivityColorlessIncrementButton.setOnClickListener(this)
+        binding.coinsActivityColorlessDecrementButton.setOnClickListener(this)
+
+        //Storm count
+        binding.coinsActivityStormIncrementButton.setOnClickListener(this)
+        binding.coinsActivityStormDecrementButton.setOnClickListener(this)
 
 //        binding.coinsActivityRedmanaIncrementButton.setOnLongClickListener {
 //            resetCounter(binding.coinsActivityRedmanaCounter)
@@ -71,6 +85,15 @@ class CoinsActivity : AppCompatActivity(), View.OnClickListener{
         when(view.id) {
             binding.coinsActivityRedmanaIncrementButton.id -> incrementCounter(binding.coinsActivityRedmanaCounter)
             binding.coinsActivityRedmanaDecrementButton.id -> decrementCounter(binding.coinsActivityRedmanaCounter)
+
+            binding.coinsActivityBluemanaIncrementButton.id -> incrementCounter(binding.coinsActivityBluemanaCounter)
+            binding.coinsActivityBluemanaDecrementButton.id -> decrementCounter(binding.coinsActivityBluemanaCounter)
+
+            binding.coinsActivityColorlessIncrementButton.id -> incrementCounter(binding.coinsActivityColorlessCounter)
+            binding.coinsActivityColorlessDecrementButton.id -> decrementCounter(binding.coinsActivityColorlessCounter)
+
+            binding.coinsActivityStormIncrementButton.id -> incrementCounter(binding.coinsActivityStormCounter)
+            binding.coinsActivityStormDecrementButton.id -> decrementCounter(binding.coinsActivityStormCounter)
         }
     }
 
