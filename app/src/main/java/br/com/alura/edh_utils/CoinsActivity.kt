@@ -60,8 +60,10 @@ class CoinsActivity : AppCompatActivity(), View.OnClickListener{
             duration = 1000
             rotationYBy(1800F)
             binding.ivCoin.isClickable = false
+            binding.coinsActivityFlipButton.isClickable = false
         }.withEndAction {
             binding.ivCoin.setImageResource(imageId)
+            binding.coinsActivityFlipButton.isClickable = true
         }.start()
     }
 
